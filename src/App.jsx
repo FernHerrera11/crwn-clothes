@@ -32,7 +32,11 @@ const categories = [
 ]
 
   return (
+    <div>
+    <div>Title of the Page</div> 
     <Directory categories={categories} />
+    </div>
+   
   
   );
 }
