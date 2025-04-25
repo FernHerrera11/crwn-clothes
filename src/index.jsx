@@ -5,7 +5,8 @@ import { UserProvider } from './contexts/user.context.jsx'
 //BrowserRouter is a component that wraps the App component and provides the routing functionality to the App component.
 //The BrowserRouter component is imported from the react-router-dom package.
 import { BrowserRouter } from 'react-router-dom';
-
+import { ProductsProvider } from './contexts/products.context.jsx';
+import { CartProvider } from './contexts/cart-context.jsx';
 
 import './index.scss';
 
@@ -15,8 +16,12 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <ProductsProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
