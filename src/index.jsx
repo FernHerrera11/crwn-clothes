@@ -5,10 +5,11 @@ import { UserProvider } from './contexts/user.context.jsx'
 //BrowserRouter is a component that wraps the App component and provides the routing functionality to the App component.
 //The BrowserRouter component is imported from the react-router-dom package.
 import { BrowserRouter } from 'react-router-dom';
-import { ProductsProvider } from './contexts/products.context.jsx';
+// import { ProductsProvider } from './contexts/products.context.jsx';
 import { CartProvider } from './contexts/cart-context.jsx';
 
 import './index.scss';
+import { CatergoriesProvider } from './contexts/categories.context.jsx';
 
 createRoot(document.getElementById('root')).render(
   //StrictMode is a component that wraps the BrowserRouter component and provides additional checks and warnings for the App component.
@@ -16,11 +17,11 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>
+        <CatergoriesProvider>
           <CartProvider>
             <App />
           </CartProvider>
-        </ProductsProvider>
+        </CatergoriesProvider>
       </UserProvider>
     </BrowserRouter>
   </StrictMode>

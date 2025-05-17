@@ -12,7 +12,7 @@ const defaultFormFields = {
     confirmPassword: ''
 }
 
-import './sign-up-form.styles.scss';
+import { HeaderTwo, SignUpContainer} from './sign-up-form.styles';
 
 const SignUpForm = () => {
 
@@ -52,8 +52,8 @@ const SignUpForm = () => {
     }
 
     return (
-        <div className="sign-up-container">
-            <h2>Dont have an account?</h2>
+        <SignUpContainer>
+            <HeaderTwo>Dont have an account?</HeaderTwo>
             <span>Sign Up with your email and password</span>
             <form onSubmit={handleSubmit}>
           
@@ -67,7 +67,7 @@ const SignUpForm = () => {
 
                 <Button type='submit'>Sign Up </Button>
             </form>
-        </div>
+        </SignUpContainer>
     ); }
 
 export default SignUpForm;
